@@ -19,6 +19,26 @@ io.on('connection', (socket) => {
     socket.on('disconnect', () => {
         console.log('User was disconnected');
     });
+
+    // socket.emit('newEmail', {
+    //     from:"mike@example.com",
+    //     text: "Hey, what up doggie smoggie?",
+    //     createdAt: 123
+    // });
+
+    // socket.on('createEmail', (newEmail) => {
+    //     console.log('createEmail', newEmail);
+    // });
+    socket.emit('newMessage', {
+            from: "Elvis",
+            text: "Hey can you meet up at 6pm",
+            createdAt: Date.now()
+        });
+
+    socket.on('createMessage', (message) => {
+        console.log('createMessage', mesage);
+    });
+    
 });
 
 
