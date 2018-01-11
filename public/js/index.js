@@ -6,9 +6,7 @@ socket.on('connect', function() {
     // socket.emit('createEmail', {
     //     to: "kastille84@gmail.com", 
     //     from: "info@example.com", text: "you wack son."
-    // });
-
-    socket.emit('createMessage', {from: 'Andrew', text: "yeah, 6pm is fine"});
+    // });    
 });
 
 socket.on('disconnect', function() {
